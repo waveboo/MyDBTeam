@@ -13,7 +13,7 @@ namespace MVC.Controllers
             return View();
         }
 
-        public ActionResult Document()
+        public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
@@ -23,13 +23,6 @@ namespace MVC.Controllers
         public ActionResult Task()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult EditNews()
-        {
-            ViewBag.Message = "Your page.";
 
             return View();
         }
