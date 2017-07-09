@@ -1,0 +1,52 @@
+﻿.navbar-fixed-top .navbar-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+
+
+
+.min-body {
+    padding-top: 60px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+
+
+.edit a{
+    color: #333;
+}
+
+.edit a:hover {
+    color: #333;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    color: #9d9d9d;
+}
+
+.uk-table th {
+    vertical-align:central;
+}
+
+.uk-link, a {
+    color:#999;
+}

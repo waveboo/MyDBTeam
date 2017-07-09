@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "News Page";
+}
+
+<div class="min-body">
+    @*<table id="newstable" class="table table-hover table-responsive table-striped">*@
+    <h1>新闻</h1>
+    <div class="uk-overflow-auto">
+        <table class="uk-table uk-table-hover uk-table-middle uk-table-striped table table-responsive ">
+            <thead>
+                <tr class="uk-text-middle">
+                    <th class="uk-table-shrink"><input id="all" class="uk-checkbox" type="checkbox"></th>
+                    <th class="uk-table-expand">标题</th>
+                    <th class="uk-table-expand">发布者</th>
+                    <th class="uk-table-expand">截止日期</th>
+                    <th class="uk-table-shrink uk-text-nowrap">
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">删除</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="uk-text-middle"><input class="uk-checkbox chbox" type="checkbox"></td>
+                    <td>软件学院五四青年节优秀本科生座谈会</td>
+                    <td>匿名</td>
+                    <td>2017/5/5 8:19</td>
+                    <td class="uk-text-nowrap">
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">@Html.ActionLink("编辑", "EditNews", "Home", new { style = "color:#999" })</button>
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="uk-text-middle"><input class="uk-checkbox chbox" type="checkbox"></td>
+                    <td>哈利波特与科技节</td>
+                    <td>匿名</td>
+                    <td>2017/5/5 8:19</td>
+                    <td class="uk-text-nowrap">
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">@Html.ActionLink("编辑", "EditNews", "Home", new { style = "color:#999" })</button>
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="uk-text-middle"><input class="uk-checkbox chbox" type="checkbox"></td>
+                    <td>软件学院五四青年节优秀本科生座谈会</td>
+                    <td>匿名</td>
+                    <td>2017/5/5 8:19</td>
+                    <td class="uk-text-nowrap">
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">@Html.ActionLink("编辑", "EditNews", "Home", new { style = "color:#999" })</button>
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="uk-text-middle"><input class="uk-checkbox chbox" type="checkbox"></td>
+                    <td>哈利波特与科技节</td>
+                    <td>匿名</td>
+                    <td>2017/5/5 8:19</td>
+                    <td class="uk-text-nowrap">
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">@Html.ActionLink("编辑", "EditNews", "Home", new { style = "color:#999" })</button>
+                        <button class="uk-button uk-button-default uk-button-small" style="color:#999;">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div align="center">
+    <ul class="linkbutton">
+        <li><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+<script src="@Url.Content("~/Scripts/Layout.js")" type="text/javascript" charset="utf-8"></script>
+<script src="@Url.Content("~/Scripts/News.js")" type="text/javascript" charset="utf-8"></script>
