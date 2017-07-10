@@ -1,0 +1,150 @@
+﻿@*@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+    
+    </div>
+</body>
+</html>*@
+@{
+    ViewBag.Title = "EditNews";
+}
+
+<div style="background:#fafafa; width:100%; height:100%;">
+    <div class="min-body">
+        <div class="uk-card uk-card-large uk-card-default uk-width-1-1@m">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-border-circle" width="40" height="40" src="@Url.Content("~/PIC/sse.png")">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom">
+                            <form>
+                                <input class="uk-input uk-form-blank uk-form-width-medium uk-width-1-1" type="text" placeholder="输入任务标题">
+                            </form>
+                        </h3>
+                        <p class="uk-text-meta uk-margin-remove-bottom" style="padding-left:10px;">发布日期：<span id="published_data">XXXX/XX/XX</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div class="uk-child-width-1-2@m uk-grid-large" uk-grid>
+                    <div>
+                        <form action="">
+                            <fieldset class="uk-fieldset">
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-stacked-text">发起人</label>
+                                    <input class="uk-input uk-form-blank" type="text" required placeholder="输入姓名">
+                                </div>
+
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-stacked-text">联系方式</label>
+                                    <input class="uk-input uk-form-blank" type="email" placeholder="输入联系方式">
+                                </div>
+
+                                <div class="uk-margin">
+                                    <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-example">指定参与者</button>
+                                    <div id="modal-example" uk-modal>
+                                        <div class="uk-modal-dialog uk-modal-body">
+                                            <ul uk-accordion>
+                                                <li class="uk-open">
+                                                    <h3 class="uk-accordion-title">主席团</h3>
+                                                    <ul class="uk-accordion-content department" style="list-style:none;">
+                                                        <li>
+                                                            <label>
+                                                                <input class="uk-checkbox" type="checkbox">
+                                                                <span style="margin-left:10px;"></span>
+                                                                <img class="uk-border-circle" width="40" height="40" style="vertical-align:middle;" src="@Url.Content("~/PIC/JKS.jpeg")">
+                                                                <span style="margin-left:10px;">金克斯</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <input class="uk-checkbox" type="checkbox">
+                                                                <span style="margin-left:10px;"></span>
+                                                                <img class="uk-border-circle" width="40" height="40" style="vertical-align:middle;" src="@Url.Content("~/PIC/JKS.jpeg")">
+                                                                <span style="margin-left:10px;">金克斯</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h3 class="uk-accordion-title">秘书处</h3>
+                                                    <ul class="uk-accordion-content department" style="list-style:none;"></ul>
+                                                </li>
+                                                <li>
+                                                    <h3 class="uk-accordion-title">文艺部</h3>
+                                                    <ul class="uk-accordion-content department" style="list-style:none;"></ul>
+                                                </li>
+                                            </ul>
+                                            <p class="uk-text-right">
+                                                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                                <button id="save" class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="selectperson" class="uk-margin"></div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-stacked-select">选择任务状态</label>
+                                    <div class="uk-form-controls">
+                                        <select class="uk-select" id="form-stacked-select">
+                                            <option>请选择</option>
+                                            <option>未完成</option>
+                                            <option>进行中</option>
+                                            <option>已完成</option>
+                                            <option>已终止</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-stacked-text">截止日期</label>
+                                    <input class="uk-input uk-form-blank" type="text" required placeholder="请输入格式为XXXX/XX/XX的日期">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div>
+                        <form action="">
+                            <fieldset class="uk-fieldset">
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-stacked-text">任务描述：</label>
+                                    <div class="uk-margin">
+                                        <textarea class="uk-textarea" rows="5" placeholder="描述任务，如不填则截取任务介绍前50字"></textarea>
+                                    </div>
+                                </div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-stacked-text">任务介绍：</label>
+                                    <div class="uk-margin">
+                                        <textarea class="uk-textarea" rows="5" placeholder="介绍任务的基本信息及具体要求"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- 此处提交存疑 -->
+                            <div class="uk-margin" uk-margin>
+                                <div class="uk-inline">
+                                    <input class="uk-button uk-button-default" type="submit" value="保存">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card-footer"></div>
+        </div>
+    </div>
+</div>
+<script src="@Url.Content("~/Scripts/Layout.js")" type="text/javascript" charset="utf-8"></script>
+<script src="@Url.Content("~/Scripts/EditNews.js")" type="text/javascript" charset="utf-8"></script>
